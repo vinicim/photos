@@ -4,15 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.modules';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent    
   ],
   imports: [
     BrowserModule,
     PhotosModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

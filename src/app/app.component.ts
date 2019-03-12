@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { PhotoService } from './photos/photo.service';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +7,4 @@ import { PhotoService } from './photos/photo.service';
 })
 export class AppComponent {
   title = 'alurapic';  
-  photos: any[] = [];
-  
-  constructor(photoService: PhotoService){
-    photoService
-    .listFromUser('flavio')
-    .subscribe(
-      photos => {
-        console.log(photos);
-        this.photos = photos;
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
 }
